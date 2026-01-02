@@ -1,0 +1,11 @@
+{
+    "editor.rulers": [100],
+
+    "[latex]": {
+        "editor.rulers": [80],
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "lectorgpt.vendors": ["google", "openai"],
+    "lectorgpt.model": "openai:gpt-4.1"
+}

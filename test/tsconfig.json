@@ -1,0 +1,10 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "..",
+        "paths": {
+            "@lectorgpt/*": ["../src/*", "../test/*"]
+        }
+    },
+    "include": ["src/**/*.ts", "test/**/*.ts"]
+}

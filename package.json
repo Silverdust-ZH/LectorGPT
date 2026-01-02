@@ -1,0 +1,141 @@
+{
+    "name": "lectorgpt",
+    "icon": "assets/images/icon.png",
+    "publisher": "samuel-loertscher",
+    "publisherDisplayName": "Samuel Lörtscher",
+    "displayName": "LectorGPT",
+    "description": "LectorGPT is a VS Code extension that refines and improves creative writing using OpenAI and Google Gemini models.",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": "https://github.com/Silverdust-ZH/LectorGPT.git",
+    "engines": {
+        "vscode": "^1.108.1"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "lectorgpt.select-active-vendors",
+                "title": "LectorGPT: Select Active Vendor Setup"
+            },
+            {
+                "command": "lectorgpt.register-new-api-key",
+                "title": "LectorGPT: Register New API Key"
+            },
+            {
+                "command": "lectorgpt.unregister-api-key",
+                "title": "LectorGPT: Unregister API Key"
+            },
+            {
+                "command": "lectorgpt.select-active-model",
+                "title": "LectorGPT: Select Active Model"
+            },
+            {
+                "command": "lectorgpt.select-active-system-prompt-source",
+                "title": "LectorGPT: Select Active System Prompt Source"
+            },
+            {
+                "command": "lectorgpt.refine-active-selection",
+                "title": "LectorGPT: Refine Active Selection"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "lectorgpt.refine-active-selection",
+                "key": "ctrl+k ctrl+l",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "title": "LectorGPT",
+            "properties": {
+                "lectorgpt.customSystemPromptSource": {
+                    "type": "string",
+                    "markdownDescription": "Path to a custom markdown (*.prompt.md) system prompt file in the current workspace."
+                },
+                "lectorgpt.vendors": {
+                    "type": "array",
+                    "markdownDescription": "Which model vendors are enabled.",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "openai",
+                            "google"
+                        ]
+                    },
+                    "enumDescriptions": [
+                        "Use OpenAI models",
+                        "Use Google Gemini models"
+                    ]
+                },
+                "lectorgpt.model": {
+                    "type": "string",
+                    "markdownDescription": "Language model used for text refinement."
+                }
+            }
+        }
+    },
+    "files": [
+        "dist/**",
+        "assets/**",
+        "package.json",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "// ------- setup -------": "",
+        "setup": "rm -rf node_modules package-lock.json && npm cache clear -f && npm i",
+        "// ------ pretest ------": "",
+        "pretest:clean": "rimraf ./out && mkdir ./out",
+        "pretest:setup": "jq '.main=\"./src/extension.js\"' package.json > out/package.json",
+        "pretest:lint": "eslint ./src/**/*.ts test/**/*.ts",
+        "pretest:compile": "tsc -p ./test/tsconfig.json",
+        "pretest": "run-s pretest:clean pretest:setup pretest:lint pretest:compile",
+        "// ------ test ------": "",
+        "test": "dbus-run-session -- xvfb-run -a vscode-test",
+        "test:cov": "dbus-run-session -- xvfb-run -a vscode-test --coverage",
+        "test:insecure": "NODE_TLS_REJECT_UNAUTHORIZED=0 npm run test",
+        "// ------ build ------": "",
+        "build:clean": "rimraf ./dist",
+        "build": "tsc -p ./tsconfig.json && npm run build:clean && node esbuild.config.mjs",
+        "// ------ package ------": "",
+        "package": "vsce package",
+        "package:validate": "vsce ls --tree"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "25.x",
+        "@types/sinon": "^21.0.0",
+        "@types/vscode": "^1.109.0",
+        "@vscode/test-cli": "^0.0.12",
+        "@vscode/test-electron": "^2.5.2",
+        "@vscode/vsce": "^3.7.1",
+        "cloc": "^2.6.0-cloc",
+        "esbuild": "^0.27.3",
+        "eslint": "^9.39.0",
+        "expect": "^30.2.0",
+        "npm-check-updates": "^19.3.2",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^3.8.1",
+        "prettier-plugin-latex": "^2.0.1",
+        "rimraf": "^6.1.2",
+        "sinon": "^21.0.1",
+        "tsconfig-paths": "^4.2.0",
+        "typedoc": "^0.28.17",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.55.0"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "openai": "^6.22.0",
+        "ts-pattern": "^5.9.0"
+    },
+    "overrides": {
+        "diff": "^8.0.3"
+    }
+}

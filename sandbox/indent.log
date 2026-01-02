@@ -1,0 +1,41 @@
+INFO:  latexindent version 3.20.1, 2023-01-07, a script to indent .tex files
+       latexindent lives here: /usr/share/texlive/texmf-dist/scripts/latexindent/
+       Sat Jan 24 15:33:40 2026
+       Reading input from STDIN
+INFO:  Processing switches:
+       -y|--yaml: YAML settings specified via command line
+       -n|--lines mode: will only operate on specific lines 1-3
+INFO:  Directory for backup files and indent.log:
+       .
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from /usr/share/texlive/texmf-dist/scripts/latexindent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is /home/node
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  YAML settings read: -y switch
+       YAML setting: "defaultIndent:'    '"
+       quote found in -y switch
+       key: 
+       value: defaultIndent:'    '
+       double-quoted string found in -y switch: "defaultIndent:'    '", substitute to defaultIndent:'    '
+INFO:  -n,--lines switch is active, operating on lines 1-3
+       number of lines in file: 2
+INFO:  interpreting 1-3
+WARN:  --lines specified with max line 3 which is *greater than* the number of lines in file: 2
+       adjusting this value to be 2
+       min line: 1, max line: 2
+INFO:  line range summary: 
+       the number of indent line ranges: 1
+       the *sorted* line ranges are in the form MIN-MAX: 
+       1-2
+INFO:  Phase 1: searching for objects
+       No objects found.
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Not outputting to file; see -w and -o switches for more options.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl

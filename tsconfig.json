@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "Node16",
+        "target": "ES2024",
+        "outDir": "out",
+        "lib": ["ES2024"],
+        "sourceMap": true,
+        "rootDir": ".",
+        "paths": {
+            "@lectorgpt/*": ["./src/*"]
+        },
+        "strict": true,
+        "stripInternal": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedParameters": true
+    },
+    "include": ["src/**/*.ts"]
+}

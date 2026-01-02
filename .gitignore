@@ -1,0 +1,7 @@
+.vscode-test
+docs
+coverage
+node_modules
+out
+dist
+*.vsix

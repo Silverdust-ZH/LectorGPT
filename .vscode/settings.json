@@ -1,0 +1,43 @@
+{
+    // 🌿 Global Editor Settings
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.rulers": [80],
+
+    // 🌿 Global Prettier Settings
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+
+    // 🌱 JSONC (Language) Settings
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // 🌱 LaTeX (Language) Settings
+    "[latex]": {
+        "editor.rulers": [80],
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // 🌿 Explorer Sort Settings
+    "explorerSort.rules": [
+        {
+            "name": "Index files first",
+            "pathPattern": "**",
+            "priorities": [
+                { "condition": "name === 'index.ts'", "priority": 100000 },
+                {
+                    "condition": "name.endsWith('.type.ts')",
+                    "priority": 99999
+                },
+                {
+                    "condition": "name.endsWith('.interface.ts')",
+                    "priority": 99999
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "id": "bash-aliases",
+    "version": "1.0.0",
+    "name": "Custom Bash Aliases",
+    "description": "Provides project-specific bash aliases"
+}

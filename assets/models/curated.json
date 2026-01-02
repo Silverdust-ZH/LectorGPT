@@ -1,0 +1,65 @@
+[
+    {
+        "vendor": "openai",
+        "id": "gpt-4.1",
+        "name": "GPT-4.1",
+        "hint": "Best quality for reasoning & writing; slower/costlier.",
+        "order": 1
+    },
+    {
+        "vendor": "openai",
+        "id": "gpt-4o",
+        "name": "GPT-4o",
+        "hint": "Great all-rounder: strong quality + fast; best default.",
+        "order": 2
+    },
+    {
+        "vendor": "openai",
+        "id": "gpt-4o-mini",
+        "name": "GPT-4o Mini",
+        "hint": "Fast & cheap for everyday tasks; weaker deep reasoning.",
+        "order": 3
+    },
+    {
+        "vendor": "openai",
+        "id": "gpt-3.5-turbo",
+        "name": "GPT-3.5 Turbo",
+        "hint": "Legacy budget model; use only if you need lowest cost.",
+        "order": 4
+    },
+    {
+        "vendor": "google",
+        "id": "models/gemini-2.5-pro",
+        "name": "Gemini 2.5 Pro",
+        "hint": "Highest quality; best for complex reasoning & long outputs.",
+        "order": 1
+    },
+    {
+        "vendor": "google",
+        "id": "models/gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash",
+        "hint": "Very fast with strong quality; great for interactive editing & summaries.",
+        "order": 2
+    },
+    {
+        "vendor": "google",
+        "id": "models/gemini-2.5-flash-lite",
+        "name": "Gemini 2.5 Flash Lite",
+        "hint": "Ultra fast & low cost; good for short edits and quick Q&A.",
+        "order": 3
+    },
+    {
+        "vendor": "google",
+        "id": "models/gemini-2.0-flash",
+        "name": "Gemini 2.0 Flash",
+        "hint": "Fast general-purpose model; good default when speed matters.",
+        "order": 4
+    },
+    {
+        "vendor": "google",
+        "id": "models/gemini-2.0-flash-lite",
+        "name": "Gemini 2.0 Flash Lite",
+        "hint": "Cheapest/fastest option; best for simple tasks and drafts.",
+        "order": 5
+    }
+]

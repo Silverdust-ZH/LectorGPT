@@ -1,0 +1,7 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 80,
+    "plugins": ["prettier-plugin-latex"],
+    "proseWrap": "always"
+}
