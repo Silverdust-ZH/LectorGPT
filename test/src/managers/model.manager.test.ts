@@ -848,7 +848,7 @@ describe("ModelManager", () => {
                     'LectorGPT: The active model "Gemini 2.5 Pro" is from ' +
                         'vendor "Google API", which is not part of the ' +
                         "active vendor setup. Please select a new model or " +
-                        "activate its vendor.",
+                        "adjust the vendor setup.",
                 );
 
                 expect(stubs.showQuickPick).toHaveBeenCalledOnceWith(
