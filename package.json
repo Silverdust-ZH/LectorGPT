@@ -9,7 +9,7 @@
     "license": "MIT",
     "repository": "https://github.com/Silverdust-ZH/LectorGPT.git",
     "engines": {
-        "vscode": "^1.108.1"
+        "vscode": "^1.109.0"
     },
     "categories": [
         "Other"
